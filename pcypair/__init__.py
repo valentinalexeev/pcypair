@@ -68,4 +68,4 @@ def parseInfoWindowToJson(data):
 	</xsl:template>
 </xsl:stylesheet>""")
 	transform = etree.XSLT(xslt_transform)
-	return json.loads(unicode(transform(etree.XML(data))))
+	return json.loads(str(transform(etree.XML(data))))
